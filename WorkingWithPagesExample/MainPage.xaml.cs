@@ -11,6 +11,7 @@ namespace WorkingWithPagesExample
     public partial class MainPage : ContentPage
     {
         Label txtLbl;
+        Label TxtLbl2;
         Button btnNext;
         StackLayout stck;
 
@@ -47,10 +48,20 @@ namespace WorkingWithPagesExample
             txtLbl.Text = "לחץ על הכפתור למעבר לדף הבא";
             txtLbl.TextColor = Color.LightYellow;
             txtLbl.FontSize = 25;
+            TxtLbl2 = new Label();
+            TxtLbl2.Text = " ";
+            TxtLbl2.TextColor = Color.LightYellow;
+            TxtLbl2.FontSize = 15;
+
             if (stck == null)
                 InitializeLayout();
             stck.Children.Add(txtLbl);
+            stck.Children.Add(TxtLbl2);
 
+        }
+        protected override void OnDisappearing()
+        {
+            TxtLbl2.Text+= $"\nYou left the main page on {DateTime.Now.ToString()}";
         }
     }
 }

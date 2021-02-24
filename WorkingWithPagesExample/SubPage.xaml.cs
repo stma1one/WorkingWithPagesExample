@@ -21,5 +21,11 @@ namespace WorkingWithPagesExample
         {
             ((App)Parent).MainPage = ((App)App.Current).Initial;
         }
+
+        protected override void OnAppearing()
+        {
+            LblTxt.Text += $"\n entered Screen on {DateTime.Now.ToString()}";
+
+        }
     }
 }
