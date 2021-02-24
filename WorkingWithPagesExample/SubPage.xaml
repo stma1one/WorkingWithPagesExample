@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WorkingWithPagesExample.SubPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="ברוכים הבאים לדף הבא!"
+                   FontSize="55"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <ImageButton x:Name="btnHome" Source="https://icons.iconarchive.com/icons/graphicloads/100-flat/256/home-icon.png" Aspect="AspectFit" HeightRequest="85"  CornerRadius="5" HorizontalOptions="Center" BackgroundColor="DarkSalmon" Clicked="btnHome_Clicked"></ImageButton>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
