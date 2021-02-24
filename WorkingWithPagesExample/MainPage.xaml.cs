@@ -61,7 +61,7 @@ namespace WorkingWithPagesExample
         }
         protected override void OnDisappearing()
         {
-            TxtLbl2.Text+= $"\nYou left the main page on {DateTime.Now.ToString()}";
+            TxtLbl2.Text+= $"\nYou left the main page on {DateTime.Now.ToString()}";    
         }
     }
 }
