@@ -17,14 +17,14 @@ namespace WorkingWithPagesExample
             InitializeComponent();
         }
 
-        private void btnHome_Clicked(object sender, EventArgs e)
+        private void BtnHome_Clicked(object sender, EventArgs e)
         {
             ((App)Parent).MainPage = ((App)App.Current).Initial;
         }
 
         protected override void OnAppearing()
         {
-            LblTxt.Text += $"\n entered Screen on {DateTime.Now.ToString()}";
+            LblTxt.Text += $"\n entered Screen on {DateTime.Now}";
 
         }
     }

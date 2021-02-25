@@ -14,6 +14,7 @@ namespace WorkingWithPagesExample
         Label LblMsg;
         Button btnNext;
         
+        
 
         public MainPage()
         {
@@ -38,18 +39,19 @@ namespace WorkingWithPagesExample
 
             Content = new StackLayout
             {
-                BackgroundColor = Color.BlueViolet,
+                BackgroundColor = Color.Purple,
                 Margin = 20,
                 Children =
                 {
                     new StackLayout
                     {
-                        BackgroundColor=Color.DarkSeaGreen,
+                        BackgroundColor=Color.Yellow,
                         Margin=20,
                         Children=
                         {
+                          new Image{Source="https://static.wixstatic.com/media/ff046b_88fb2c5aa50344309b9127de0911f349~mv2.jpg/v1/fit/w_2500,h_1330,al_c/ff046b_88fb2c5aa50344309b9127de0911f349~mv2.jpg"},
                           new Label{Text = "לחץ על הכפתור למעבר לדף הבא",
-                          TextColor = Color.LightYellow,
+                          TextColor = Color.MediumPurple,
                           FontSize = 25 },
                           btnNext,
                           LblMsg
@@ -71,7 +73,7 @@ namespace WorkingWithPagesExample
        
         protected override void OnDisappearing()
         {
-            LblMsg.Text+= $"\nYou left the main page on {DateTime.Now.ToString()}";    
+            LblMsg.Text += $"\nYou left the main page on {DateTime.Now}";
         }
     }
 }

@@ -4,11 +4,11 @@
              x:Class="WorkingWithPagesExample.SubPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label x:Name="LblTxt" Text="ברוכים הבאים לדף הבא!"
+            <Label x:Name="LblTxt" Text="חולוניה בלב ובנשמה!"
                    FontSize="25" HorizontalTextAlignment="Center"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-            <ImageButton x:Name="btnHome" Source="https://icons.iconarchive.com/icons/graphicloads/100-flat/256/home-icon.png" Aspect="AspectFit" HeightRequest="85"  CornerRadius="5" HorizontalOptions="Center" BackgroundColor="DarkSalmon" Clicked="btnHome_Clicked"></ImageButton>
+            <ImageButton x:Name="btnHome" Source="https://icons.iconarchive.com/icons/graphicloads/100-flat/256/home-icon.png" Aspect="AspectFit" HeightRequest="85"  CornerRadius="5" HorizontalOptions="Center" BackgroundColor="DarkSalmon" Clicked="BtnHome_Clicked"></ImageButton>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
