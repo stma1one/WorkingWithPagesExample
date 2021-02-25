@@ -27,7 +27,7 @@ namespace WorkingWithPagesExample
         {
             btnNext = new Button { Text = "Next" };
 
-            btnNext.Clicked+= (sender, e) => { ((App)this.Parent).MainPage = new SubPage(); };
+            btnNext.Clicked+= (sender, e) => { ((App)App.Current).MainPage = new SubPage(); };
             LblMsg = new Label
             {
                 Text = " ",
