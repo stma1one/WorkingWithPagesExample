@@ -8,6 +8,12 @@ using Xamarin.Forms;
 
 namespace WorkingWithPagesExample
 {
+    /// <summary>
+    /// page containing image and a button.
+    /// all layouts are created dynamically
+    /// when pressing the button, the event handler changes the main App MainPage to the second page.
+    /// there is an override OnDisappearing which adds to a label's text The date and time when left the page
+    /// </summary>
     public partial class MainPage : ContentPage
     {
        
@@ -20,14 +26,15 @@ namespace WorkingWithPagesExample
         {
             InitializeComponent();
             InitializeLayout();
-            
+            Title = "Hapoel Holon";
            
         }
 
         private void InitializeLayout()
         {
             btnNext = new Button { Text = "Next" };
-
+           
+            //dynamically adds function when the event raises- change the App's MainPage property to subPage
             btnNext.Clicked+= (sender, e) => { ((App)App.Current).MainPage = new SubPage(); };
             LblMsg = new Label
             {
@@ -68,9 +75,7 @@ namespace WorkingWithPagesExample
            
         }
 
-       
-
-       
+          
         protected override void OnDisappearing()
         {
             LblMsg.Text += $"\nYou left the main page on {DateTime.Now}";

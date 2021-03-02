@@ -9,7 +9,14 @@ using Xamarin.Forms.Xaml;
 
 namespace WorkingWithPagesExample
 {
+    /// <summary>
+    /// sub page has a label and a home button.
+    /// when pressed it changes back the MainPage Property of the App to the Main Page.
+    /// Override OnAppearing()- set the label text to the current date and time.
+    /// </summary>
     [XamlCompilation(XamlCompilationOptions.Compile)]
+   
+   
     public partial class SubPage : ContentPage
     {
         public SubPage()
@@ -19,7 +26,7 @@ namespace WorkingWithPagesExample
 
         private void BtnHome_Clicked(object sender, EventArgs e)
         {
-            ((App)Parent).MainPage = ((App)App.Current).Initial;
+            ((App)App.Current).MainPage = ((App)App.Current).Initial;
         }
 
         protected override void OnAppearing()
